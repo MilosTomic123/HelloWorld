@@ -45,7 +45,7 @@
                     <param id="3" name="Y">Spawner.Y</param>
                 </action>
                 <action behavior="Bullet" id="5" name="Set enabled" sid="116607700406917" type="Bubble">
-                    <param id="0" name="State">1</param>
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>

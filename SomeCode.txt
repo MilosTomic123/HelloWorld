@@ -18,4 +18,8 @@ this.age = age;
 }
 
 
+public String toString(){
+return "Hello, my name is " + name;
+}
+
 }

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Speed" sid="588836637005753" static="0" type="number">120</variable>
+        <variable constant="0" name="GameOver" sid="523339938076190" static="0" type="number">0</variable>
+        <variable constant="0" name="Lives" sid="526808851930918" static="0" type="number">3</variable>
+        <variable constant="0" name="Score" sid="576913128742137" static="0" type="number">0</variable>
+        <event-block sid="959711228541053">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="416288031047993" type="System">
+                    <param id="0" name="Variable">Play</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="533426972236752" type="System" />
+                <action id="-10" name="Add to" sid="840830944100148" type="System">
+                    <param id="0" name="Variable">Play</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="400751989763041">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="789573799634313" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="198605160920639" type="System">
+                    <param id="0" name="Object">Spawner</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="893098410712392" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="705723406371149" type="System">
+                    <param id="0" name="Object to create">Bubble</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Spawner.X</param>
+                    <param id="3" name="Y">Spawner.Y</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="116607700406917" type="Bubble">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="519910666681787">
+            <conditions>
+                <condition id="3" name="On touched object" sid="228247085537137" type="Touch">
+                    <param id="0" name="Object">Bubble</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="758979393459532" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="100487848873835" type="Bubble" />
+                <action id="-10" name="Add to" sid="303730762061298" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="796755996495001" type="Audio">
+                    <param id="0" name="Audio file">Blop-Mark_DiAngelo-79054334_1_</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;pop&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="800828727316408" type="Destroyed">
+                    <param id="0" name="X">Bubble.X</param>
+                    <param id="1" name="Y">Bubble.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="278877183310213" type="Destroyed">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="541845618207929" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="975779928352255" type="Destroyed">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="365941198421512">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="325828532946541" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="922906721680869" type="Score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
+                </action>
+                <action id="0" name="Set text" sid="214618876598935" type="Lives">
+                    <param id="0" name="Text">&quot;Lives:&quot; &amp;  Lives</param>
+                </action>
+                <action id="0" name="Set text" sid="235315451582097" type="Faster">
+                    <param id="0" name="Text">&quot;Faster!&quot;</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="136181319199972" type="Bubble">
+                    <param id="0" name="Speed">Speed </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="538868315459435">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="774435905696855" type="Bubble" />
+                <condition id="-14" name="Compare variable" sid="152017914448492" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="836105348552359" type="Bubble" />
+                <action id="0" name="Play" sid="920852071042388" type="Audio">
+                    <param id="0" name="Audio file">LostLife</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;LostLife&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="923867321868475" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="201100772438681">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="563940455526751" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="312198610441685" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="779480065755336">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="973706262210129" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="405633458462742" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="134040681561511" type="Audio">
+                    <param id="0" name="Audio file">GameOver</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;GameOver&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="441506530738607" type="Score">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="327433226475842" type="Lives">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="802353609876153" type="GameOver">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="565539688946521" type="EndScore">
+                    <param id="0" name="Text">&quot;You scored: &quot; &amp; Score</param>
+                </action>
+                <action id="-15" name="Set visible" sid="299520805575959" type="EndScore">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="950785047760982" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="296388452245550" type="System" />
+                <action id="-21" name="Reset global variables" sid="879071978611221" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="113595310399054">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="137138586301282" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="121671996498512" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="576087079315156" type="Audio">
+                    <param id="0" name="Audio file">Faster</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;Faster&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="383055186834910" type="System">
+                    <param id="0" name="Variable">Speed</param>
+                    <param id="1" name="Value">Speed + 50</param>
+                </action>
+                <action id="-15" name="Set visible" sid="515482451490150" type="Faster">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="328232962919159" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="477158986465303" type="Faster">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934718329641679">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="861685290049319" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="301985683732152" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="181380699695152" type="Audio">
+                    <param id="0" name="Audio file">Relaxing-ambient-music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;AmbientMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

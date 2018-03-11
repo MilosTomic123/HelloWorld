@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>BubblePop</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1olba2t4ymlz9</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1366</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="397606601139513">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Milos\Desktop\GamesMaker\Game2-BubblyBath\Bathtub.png" />
+        </object-type>
+        <object-type name="Bubble" sid="974467996306032">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="619948573282678">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438924857749884" speed="5">
+                    <frame duration="1" hotspotX="0.535" hotspotY="0.539496" original-source="C:\Users\Milos\Desktop\GamesMaker\Game2-BubblyBath\Bubble.png">
+                        <collision-poly>
+                            <point x="0.0883334" y="0.139496" />
+                            <point x="0.5" y="0" />
+                            <point x="0.883333" y="0.141176" />
+                            <point x="0.995" y="0.49916" />
+                            <point x="0.91" y="0.872269" />
+                            <point x="0.5" y="0.996639" />
+                            <point x="0.0816667" y="0.880672" />
+                            <point x="0.00333333" y="0.49916" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="162014612781003">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Spawner" sid="721621446930515">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672046506928912" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="372670882331840">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBox" sid="996419534122828">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Lives" sid="877573162902780">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOver" sid="717066417855992">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="606340436447650">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Sprite" sid="351671966564089">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="618565305146444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Milos\Desktop\sketch-1501230845082.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Faster" sid="425101171993661">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="ShadowCaster" sid="628610306146177">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Sprite3" sid="497422649319745">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="354670362509888" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Milos\Desktop\sketch-1501234329921.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Destroyed" sid="894174613688778">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="230787276134711">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393572125522545" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\Milos\Desktop\sketch-1501234329921.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="255622775887990">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506669827466568" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Milos\Desktop\sketch-1501241862293.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EndScore" sid="956050783856169">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="792268706113822">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539020872809260" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Milos\Desktop\GamesMaker\Game2-BubblePop\Background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Play" sid="889439120924351">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Button" sid="648673114695389">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490637045208335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayButton" sid="237607022239537">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Intro.xml</layout>
+        <layout>Gameplay.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="2">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="3">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Blop-Mark_DiAngelo-79054334_1_.m4a" />
+        <file name="Blop-Mark_DiAngelo-79054334_1_.ogg" />
+        <file name="LostLife.m4a" />
+        <file name="LostLife.ogg" />
+        <file name="GameOver.m4a" />
+        <file name="GameOver.ogg" />
+        <file name="Faster.m4a" />
+        <file name="Faster.ogg" />
+        <file name="Relaxing-ambient-music.m4a" />
+        <file name="Relaxing-ambient-music.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

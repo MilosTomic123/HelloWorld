@@ -2,4 +2,7 @@ public class myClass{
 
 String name = "Joe";
 
+int age = 33;
+
+
 }

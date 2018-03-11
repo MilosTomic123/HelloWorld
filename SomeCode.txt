@@ -1,7 +1,6 @@
 public class myClass{
 
 String name = "Joe";
-
 int age = 33;
 
 public myClass(String name, int age){
@@ -16,7 +15,6 @@ return age;
 public void setAge(int age){
 this.age = age;
 }
-
 
 public String toString(){
 return "Hello, my name is " + name;
